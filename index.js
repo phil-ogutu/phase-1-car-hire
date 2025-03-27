@@ -126,7 +126,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 document.getElementById("edit-modal").style.display = "none";
                 location.reload();
             })
-            .catch(error => console.error("Error updating car:", error));
+            .catch(error => console.error(error));
     });
 
     document.querySelector(".close-modal").addEventListener("click", () => {
