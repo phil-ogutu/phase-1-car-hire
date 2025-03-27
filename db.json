@@ -1,0 +1,73 @@
+{
+  "cars": [
+    {
+      "image": "assets/images/mercedes_benz.jpg",
+      "name": "Mercedes-Benz S-Class",
+      "model": "2023",
+      "hire_price_per_day": 15000,
+      "category": "guided",
+      "id": "1"
+    },
+    {
+      "category": "guided",
+      "image": "assets/images/range_rover.jpg",
+      "name": "Range Rover Sport",
+      "model": "2046",
+      "hire_price_per_day": 12000,
+      "id": "3"
+    },
+    {
+      "image": "assets/images/toyota_corolla.jpg",
+      "name": "Toyota Corolla",
+      "model": "2022",
+      "hire_price_per_day": 4500,
+      "category": "self-drive",
+      "id": "4"
+    },
+    {
+      "id": "5",
+      "name": "Toyota HiAce Van",
+      "model": "2021",
+      "hire_price_per_day": 100,
+      "description": "A spacious van ideal for group travel, tours, or airport transfers.",
+      "category": "group-travel",
+      "image": "assets/images/toyota_hiace.jpg"
+    },
+    {
+      "id": "6",
+      "name": "Isuzu NQR",
+      "model": "2023",
+      "hire_price_per_day": 250,
+      "description": "A comfortable 25-seater bus perfect for group trips and corporate transport.",
+      "category": "group-travel",
+      "image": "assets/images/isuzu_nqr.jpg"
+    },
+    {
+      "id": "7",
+      "name": "VW Golf",
+      "model": "2022",
+      "hire_price_per_day": 5000,
+      "description": "A reliable and fuel-efficient sedan, perfect for city and highway driving.",
+      "category": "self-drive",
+      "image": "assets/images/vw_golf.jpg"
+    },
+    {
+      "id": "9",
+      "name": "Scania",
+      "model": "2022",
+      "hire_price_per_day": 50,
+      "description": "A reliable and fuel-efficient sedan, perfect for city and highway driving.",
+      "category": "group-travel",
+      "image": "assets/images/scania.jpg"
+    },
+    {
+      "id": "c7f3",
+      "name": "Mazda Demio",
+      "model": "2020",
+      "hire_price_per_day": 2000,
+      "category": "self-drive",
+      "description": "1200cc Diesel",
+      "image": "assets/images/mazda_demio.jpg"
+    }
+  ]
+}

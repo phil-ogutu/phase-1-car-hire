@@ -92,12 +92,38 @@ section.about .about-content .about-text{
     padding: 2rem;
 }
 section.about .about-content .about-text p{
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     text-align: justify;
+}
+
+#show-form-btn{
+    position: absolute;
+    width: 400px;
+    right: 100px;
+    margin-top: 50px;
+    background-color: #007bff;
+    color: #fff;
+}
+#add-car-form input{
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+#add-car-form button{
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 section.self-drive{
     width: 100vw;
     height: 50vh;
+    margin-top: 80px;
 }
 section.self-drive .selfdrive-heading{
     width: 100vw;
@@ -107,40 +133,35 @@ section.self-drive .selfdrive-heading h3{
     font-size: 30px;
 }
 .cards{
-    width: 100%;
+    width: 100vw;
     height: 70%;
     display: flex;
     justify-content: space-around;
 }
 .card{
-    width: 30%;
+    width: 80%;
     height: 100%;
     border-radius: 1.0rem;
     overflow: hidden;
     position: relative;
     text-align: center;
-    color: white;
-   
-}
-.card:hover{
-    width: 32%;
-    height: 102%;
+    color: rgb(136, 146, 161);
 }
 .card img{
     width: 100%;
-    height: 100%;
+    height: 74%;
     object-fit: cover;
     border-radius: 1.0rem;
 }
-
-.card .car-description{
+.card .car-name{
     position: absolute;
     top: 16px;
+    left: 10px;
     font-size: 30px;
 }
 .card .car-price{
     position: absolute;
-    top: 16px;
+    bottom: 60px;
     right: 10px;
     font-size: 35px;
 }
@@ -153,7 +174,7 @@ section.self-drive .selfdrive-heading h3{
 }
 .card .car-transmission img{
     width: 100%;
-    height: 80%;
+    height: 60%;
     filter: invert(1);
 }
 section.guided{
@@ -177,4 +198,86 @@ section.group-travel .grouptravel-heading{
 }
 section.group-travel .grouptravel-heading h3{
     font-size: 30px;
+}
+button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.edit-btn{
+    background-color: #007bff;
+    color: white;
+    margin-top: 15px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.delete-btn{
+    background-color: rgb(176, 64, 64);
+    color: white;
+    margin-top: 15px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 1000; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.modal-content {
+    background: rgb(249, 249, 249);
+    width: 40%;
+    max-width: 500px;
+    margin: 10% auto;
+    padding: 60px;
+    border-radius: 10px;
+    text-align: center;
+}
+.close-modal {
+    position: absolute;
+    right: 425px;
+    top: 165px;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #555;
+}
+
+.close-modal:hover {
+    color: #ff3333;
+}
+
+.modal-content input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+#save-changes-btn {
+    background: #007bff;
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+
+}
+#save-changes-btn:hover {
+    background: #0056b3;
 }

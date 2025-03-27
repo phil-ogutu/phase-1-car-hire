@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Car Hire</title>
     <link rel="stylesheet" href="./style.css">
+    <script src="./index.js"></script>
 </head>
 
 <body>
@@ -30,9 +31,6 @@
         <div class="overlay">
             <div class="banner-content">
                 <p>We offer reliable car rental services in Nairobi and all over Kenya...</p>
-                <div class="banner-buttons">
-                    <button class="banner-btn cta">Browse through our collection ></button>
-                </div>
             </div>
         </div>
     </section>
@@ -51,18 +49,26 @@
                     packaged safaris on self-drive or chauffeured in land cruiser or safari minibus four wheel drive to
                     witness migration safaris.
                     <br>
-                    <br>
-                    Kenya Car hire services for Group transport services from 4,14 seater,22 seater buses,33 seater
-                    coaches,37 seat buses and 45 seat bus rental. We have VIP transport services with Mercedes Vito and
-                    Mercedes viano Vclass cars,Eclass and S class. Also for group transport with 33 and 45 seater
-                    Mercedes Benz buses.</p>
-                <button class="about-cta cta">Contact</button>
+                </p>
             </div>
             <div class="about-image">
                 <img src="./assets/hero.png" alt="Image for about us">
             </div>
         </div>
     </section>
+
+    <!--Add Car Button-->
+    <button id="show-form-btn">Add a New Car</button>
+    <form id="add-car-form" style="display: none;">
+        <input type="text" id="car-name" placeholder="Car Name">
+        <input type="text" id="car-model" placeholder="Car Model">
+        <input type="number" id="car-price" placeholder="Hire Price (KES)">
+        <input type="text" id="car-category" placeholder="Category (self-drive, guided, group-travel)">
+        <input type="text" id="car-description" placeholder="Description">
+        <input type="text" id="car-image" placeholder="Image URL"><br/>
+        <button type="submit">Add Car</button>
+        <button type="button" id="hide-form-btn">Cancel</button>
+    </form>
 
     <!--Self-Drive Section-->
     <section class="self-drive">
@@ -72,49 +78,27 @@
         <div class="selfdrive-cards cards">
             <div class="selfdrive-card card">
                 <img src="/assets/hero.png" alt="">
-                <div class="car-description">Toyota Rav4</div>
+                <div class="car-name">Toyota Rav4</div>
                 <div class="car-price">Kes 70</div>
-                <div class="car-transmission"><img src="/assets/gear-shift.png" alt="">Auto</div>
-            </div>
-            <div class="selfdrive-card card">
-                <img src="/assets/hero.png" alt="">
-                <div class="car-description">Toyota Rav4</div>
-                <div class="car-price">Kes 70</div>
-                <div class="car-transmission"><img src="/assets/gear-shift.png" alt="">Auto</div>
-            </div>
-            <div class="selfdrive-card card">
-                <img src="/assets/hero.png" alt="">
-                <div class="car-description">Toyota Rav4</div>
-                <div class="car-price">Kes 70</div>
-                <div class="car-transmission"><img src="/assets/gear-shift.png" alt="">Auto</div>
+                <button class="edit-btn">Edit</button>
+                <button class="delete-btn">Delete</button>
             </div>
         </div>
 
     </section>
 
-    <!--Chauffered Section-->
+    <!--Chauffeured Section-->
     <section class="guided">
         <div class="guided-heading">
-            <h3>Chauffered</h3>
+            <h3>Chauffeured</h3>
         </div>
         <div class="guided-cards cards">
             <div class="guided-cards card">
                 <img src="/assets/hero.png" alt="">
-                <div class="car-description">Toyota Rav4</div>
+                <div class="car-name">Toyota Rav4</div>
                 <div class="car-price">Kes 700</div>
-                <div class="car-transmission"><img src="/assets/gear-shift.png" alt="">Auto</div>
-            </div>
-            <div class="guided-cards card">
-                <img src="/assets/hero.png" alt="">
-                <div class="car-description">Toyota Rav4</div>
-                <div class="car-price">Kes 70</div>
-                <div class="car-transmission"><img src="/assets/gear-shift.png" alt="">Auto</div>
-            </div>
-            <div class="guided-cards card">
-                <img src="/assets/hero.png" alt="">
-                <div class="car-description">Toyota Rav4</div>
-                <div class="car-price">Kes 70</div>
-                <div class="car-transmission"><img src="/assets/gear-shift.png" alt="">Auto</div>
+                <button class="edit-btn">Edit</button>
+                <button class="delete-btn">Delete</button>
             </div>
         </div>
 
@@ -128,24 +112,27 @@
         <div class="grouptravel-cards cards">
             <div class="grouptravel-cards card">
                 <img src="/assets/hero.png" alt="">
-                <div class="car-description">Toyota Rav4</div>
+                <div class="car-name">Toyota Rav4</div>
                 <div class="car-price">Kes 70</div>
-                <div class="car-transmission"><img src="/assets/gear-shift.png" alt="">Auto</div>
-            </div>
-            <div class="grouptravel-cards card">
-                <img src="/assets/hero.png" alt="">
-                <div class="car-description">Toyota Rav4</div>
-                <div class="car-price">Kes 70</div>
-                <div class="car-transmission"><img src="/assets/gear-shift.png" alt="">Auto</div>
-            </div>
-            <div class="grouptravel-cards card">
-                <img src="/assets/hero.png" alt="">
-                <div class="car-description">Toyota Rav4</div>
-                <div class="car-price">Kes 70</div>
-                <div class="car-transmission"><img src="/assets/gear-shift.png" alt="">Auto</div>
+                <button class="edit-btn">Edit</button>
+                <button class="delete-btn">Delete</button>
             </div>
         </div>
     </section>
+
+    <div id="edit-modal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Edit Car Details</h2>
+            <input type="hidden" id="edit-car-id">
+            <input type="text" id="edit-car-name" placeholder="Car Name">
+            <input type="text" id="edit-car-model" placeholder="Car Model">
+            <input type="text" id="edit-car-category" placeholder="Car Category">
+            <input type="number" id="edit-car-price" placeholder="Hire Price (KES)">
+            <input type="hidden" id="edit-car-image" readonly>
+            <button id="save-changes-btn">Update</button>
+        </div>
+    </div>
 </body>
 
 </html>
