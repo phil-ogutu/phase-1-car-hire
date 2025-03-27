@@ -86,6 +86,8 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         });
     }
+
+    //Open Edit Car Modal
     function editCar(carId) {
         fetch(`http://localhost:3000/cars/${carId}`)
             .then(response => response.json())
@@ -104,6 +106,7 @@ document.addEventListener("DOMContentLoaded", () => {
             .catch(error => console.error(error));
     }
 
+    //Edit Car
     document.getElementById("save-changes-btn").addEventListener("click", () => {
         const carId = document.getElementById("save-changes-btn").getAttribute("data-id");
 
@@ -133,6 +136,7 @@ document.addEventListener("DOMContentLoaded", () => {
         document.getElementById("edit-modal").style.display = "none";
     });
 
+    //Delete Car
     function deleteCar(carId) {
 
         fetch(`http://localhost:3000/cars/${carId}`, {
