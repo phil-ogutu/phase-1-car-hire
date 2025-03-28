@@ -10,12 +10,12 @@ A simple car rental management system that allows users to view available cars, 
 
 ## Technologies Used
 - HTML, CSS, JavaScript
-- JSON Server (Mock Backend)
+- JSON Server
 
 ## Installation
 
 ### 1. Clone the Repository
-```git@github.com:phil-ogutu/phase-1-car-hire.git```
+```git@github.com:phil-ogutu/phase-1-car-hire.git```<br>
 ```cd phase-1-car-hire```
 ### 2. Start the JSON Server
 ```json-server --watch db.json --port 3000```
