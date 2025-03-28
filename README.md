@@ -4,7 +4,7 @@ A simple car rental management system that allows users to view available cars, 
 
 ## Features
 - Display a list of available cars
-- View car details in a modal
+- View car details
 - Edit car details
 - Delete cars
 
